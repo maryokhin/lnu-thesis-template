@@ -1,0 +1,31 @@
+# LaTeX files
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.bcf
+*.brf
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+
+# Generated PDF files
+report.pdf

@@ -1,0 +1,64 @@
+\newgeometry{top=0cm, left=5cm}
+
+%----------------------------------------------------------------------------------------
+%	Tassel environment configuration
+%----------------------------------------------------------------------------------------
+\newsavebox{\mybox}
+\newlength{\mydepth}
+\newlength{\myheight}
+
+\newenvironment{tassel}
+{\begin{lrbox}{\mybox}\begin{minipage}{\textwidth}}
+{\end{minipage}\end{lrbox}
+ \settodepth{\mydepth}{\usebox{\mybox}}
+ \settoheight{\myheight}{\usebox{\mybox}}
+ \addtolength{\myheight}{\mydepth}
+ \noindent\makebox[0pt]{\hspace{-20pt} % inner offset
+ \rule[-\mydepth]{1pt}{\myheight}} % tassel width
+ \usebox{\mybox}}
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\setlength{\wpXoffset}{-8.3cm}
+\setlength{\wpYoffset}{12.5cm}
+\ThisCenterWallPaper{0.1}{../img/lnu/logo.png}
+
+\ThisLLCornerWallPaper{0.45}{../img/lnu/branch.png}
+
+\begin{tassel}
+    \vspace{7.5cm} % tassel length
+    \normalfont \normalsize
+    \huge Type of document \\ % Document type
+    \vspace{-1.3cm}
+\end{tassel}
+
+\vspace{3cm}
+
+\begin{flushleft}
+    \normalfont 
+    \huge Title \\ % Document title
+    \huge \it Degree project in progress  % Optional document subheading
+\end{flushleft}
+
+\null
+\vfill
+
+\begin{textblock}{6}(10,13)
+\begin{flushright}
+\begin{minipage}{\textwidth}
+\begin{flushleft} \normalfont \large
+\emph{Author:} John \textsc{Smith}\\
+\emph{Supervisor:} Dr.~Foo \textsc{Bar}\\
+\emph{Examiner:} Dr.~Mark \textsc{Brown}\\
+\emph{Semester:} HT2014\\
+\emph{Subject:} Any Science\\
+\emph{Course code:} xDVxxE
+\end{flushleft}
+\end{minipage}
+\end{flushright}
+\end{textblock}
+
+\end{titlepage}
+
+\restoregeometry
