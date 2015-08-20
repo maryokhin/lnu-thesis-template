@@ -4,21 +4,16 @@
 \documentclass[a4paper, 12pt, titlepage, abstract, numbers=enddot]{scrreprt}
 
 \usepackage[T1]{fontenc} % 8-bit encoding which has 256 glyphs
-\usepackage{mathtools} % Support for advanced formulas
-\usepackage{accents} % Support for advanced accents
-\usepackage{mathptmx} % Use Times as default text font, and provide maths support
-\usepackage[utf8]{inputenc}
-\usepackage{dtklogos} % Logos for i.e. LaTeX, BibTeX, etc.
-\usepackage{wallpaper} % Build background
+\usepackage[utf8]{inputenc} % Support UTF-8 encoding
 \usepackage[absolute]{textpos} % Ability to absolutely position the text
-\usepackage{subcaption} % Ability to position figures side by side
 \usepackage[top=2cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} % Set margins
-\usepackage{appendix} % Support for separate handling of attachments
 \usepackage[linktoc=all]{hyperref} % Support hyper-linking of Table of Contents
 \usepackage[figure]{hypcap} % Point the hyperlink to the top of figures and tables
 \usepackage[noabbrev]{cleveref} % Reference macros depending on type of referenced object
-\usepackage{csquotes} % Handles the quotes
 \usepackage[backend=biber, style=ieee, sorting=none]{biblatex} % Handles the bibliography
+\usepackage{wallpaper} % Build title background
+\usepackage{mathptmx} % Use Times as default text font, and provide maths support
+\usepackage{appendix} % Support for separate handling of attachments
 
 \setkomafont{disposition}{\bfseries} % Switch to serif for headings
 \addtokomafont{chapter}{\fontsize{14}{15}\selectfont}
@@ -29,24 +24,25 @@
 \setcounter{tocdepth}{3} % Three levels of heading numbering in the table of contents
 
 % Partial compilation possible when working on specific chapters
-\includeonly{introduction,background,method,results,analysis,discussion, conclusion} 
+\includeonly{introduction,background,method,results,analysis,discussion,conclusion} 
 
 \addbibresource{refs.bib} % Bibliography source 
 
-
 \begin{document}
 \pagenumbering{gobble}
-
 \input{title}
  
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
 \begin{abstract}
-The report can have a summary or an abstract. An abstract is a more scientific way to
+\noindent The report can have a summary or an abstract. An abstract is a more scientific way to
 summarize the report. The abstract should be no longer than a paragraph, and is not
 divided into more than one piece. In the abstract, you are answering the questions:
 
 \begin{itemize}
 	\item In what context is the problem raised?
-	\item What was the problem? Why is it iteresting and important to study this specific problem?
+	\item What was the problem? Why is it interesting and important to study this specific problem?
 	\item What has been done to solve the problem?
 	\item What is the result?
 \end{itemize}
@@ -57,8 +53,8 @@ From reading the summary or the abstract the reader should clearly understand wh
 
 \textbf{Keywords:}
 Thesis, report, template.
-
 \end{abstract}
+
 %----------------------------------------------------------------------------------------
 %	Preface
 %----------------------------------------------------------------------------------------
@@ -68,6 +64,7 @@ You can have a preface in the paper if you want, but it is not necessary. In thi
 It is also in the preface you can take this opportunity to thank the people who have been particularly helpful during the report writing, for example, if you had any contact with a company that helped, those who have participated in interviews or questionnaires, if you received any funding from any or if you had someone who helped with proofreading.
 
 The preface should not be long-winded, maximum half a page. Also note anonymity and confidentiality before you mention people by name. You can thank the people anyway, without typing their name.
+
 %----------------------------------------------------------------------------------------
 %   Table of contents, list of figures
 %----------------------------------------------------------------------------------------

@@ -26,6 +26,3 @@
 *.run.xml
 *.synctex.gz
 *.fdb_latexmk
-
-# Generated PDF files
-report.pdf
